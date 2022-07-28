@@ -1,2 +1,2 @@
 # codbex-hyperion
-Business Process Platform
+Business Process Management Platform
