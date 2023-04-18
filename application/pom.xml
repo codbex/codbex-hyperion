@@ -85,7 +85,7 @@
 		<dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-api-bpm</artifactId>
-            <version>9.0.0-SNAPSHOT</version>
+            <version>${dirigible.version}</version>
         </dependency>
 		
 		<!-- Resources -->
