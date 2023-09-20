@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.codbex.hyperion</groupId>
         <artifactId>codbex-hyperion-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>0.11.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <name>codbex - hyperion - branding</name>
     <artifactId>codbex-hyperion-branding</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.11.0</version>
     <packaging>jar</packaging>
 
     <properties>
