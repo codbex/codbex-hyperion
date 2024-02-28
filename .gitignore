@@ -21,3 +21,4 @@ dist/
 *.jar
 derby.log
 logs/
+.idea
