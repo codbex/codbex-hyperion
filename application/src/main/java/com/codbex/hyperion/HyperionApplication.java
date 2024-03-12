@@ -23,8 +23,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableJpaAuditing
 @EnableJpaRepositories
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
-        HibernateJpaAutoConfiguration.class, JdbcTemplateAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = {"com.codbex.hyperion", "org.eclipse.dirigible.components"})
 @EnableScheduling
 public class HyperionApplication {
 	
