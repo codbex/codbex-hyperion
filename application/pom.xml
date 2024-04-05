@@ -17,15 +17,15 @@
 	<dependencies>
 
 		<dependency>
-            <groupId>com.codbex.hyperion</groupId>
-            <artifactId>codbex-hyperion-branding</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+            		<groupId>com.codbex.hyperion</groupId>
+            		<artifactId>codbex-hyperion-branding</artifactId>
+            		<version>1.0.0-SNAPSHOT</version>
+        	</dependency>
 		<dependency>
-            <groupId>com.codbex.hyperion</groupId>
-            <artifactId>codbex-hyperion-welcome</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+            		<groupId>com.codbex.hyperion</groupId>
+            		<artifactId>codbex-hyperion-welcome</artifactId>
+            		<version>1.0.0-SNAPSHOT</version>
+        	</dependency>
 
 		<!-- Core -->
 		<dependency>
@@ -80,9 +80,9 @@
 			<type>pom</type>
 		</dependency>
 		<dependency>
-            <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-api-bpm</artifactId>
-        </dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-api-bpm</artifactId>
+        	</dependency>
 		
 		<!-- Resources -->
 		<dependency>
@@ -97,9 +97,9 @@
 			<artifactId>dirigible-components-ide-workspace</artifactId>
 		</dependency>
 		<dependency>
-            <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-ide-ui-actions-service</artifactId>
-        </dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-actions-service</artifactId>
+        	</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-git</artifactId>
@@ -111,6 +111,10 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-template</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-terminal</artifactId>
 		</dependency>
 		
 		<!-- IDE UI -->
@@ -265,6 +269,42 @@
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-bpm-workspace</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-data-structures</artifactId>
+		</dependency>
+		<dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-extensions</artifactId>
+        	</dependency>
+        	<dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-extensions-menu</artifactId>
+        	</dependency>
+		<dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-jobs</artifactId>
+        	</dependency>
+        	<dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-jobs-menu</artifactId>
+        	</dependency>
+        	<dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-listeners</artifactId>
+        	</dependency>
+        	<dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-listeners-menu</artifactId>
+        	</dependency>
+		<dependency>
+            		<groupId>org.eclipse.dirigible</groupId>
+            		<artifactId>dirigible-components-ide-ui-operations</artifactId>
+        	</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-terminal</artifactId>
 		</dependency>
 		
 		<!-- Templates -->
