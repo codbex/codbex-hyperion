@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.codbex.hyperion</groupId>
-        <artifactId>codbex-hyperion-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
+	<parent>
+		<groupId>com.codbex.hyperion</groupId>
+		<artifactId>codbex-hyperion-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 
 	<name>codbex - hyperion - application</name>
 	<artifactId>codbex-hyperion-application</artifactId>
@@ -17,15 +17,15 @@
 	<dependencies>
 
 		<dependency>
-            		<groupId>com.codbex.hyperion</groupId>
-            		<artifactId>codbex-hyperion-branding</artifactId>
-            		<version>1.0.0-SNAPSHOT</version>
-        	</dependency>
+			<groupId>com.codbex.hyperion</groupId>
+			<artifactId>codbex-hyperion-branding</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 		<dependency>
-            		<groupId>com.codbex.hyperion</groupId>
-            		<artifactId>codbex-hyperion-welcome</artifactId>
-            		<version>1.0.0-SNAPSHOT</version>
-        	</dependency>
+			<groupId>com.codbex.hyperion</groupId>
+			<artifactId>codbex-hyperion-welcome</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 
 		<!-- Core -->
 		<dependency>
@@ -39,7 +39,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- Security -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
@@ -49,19 +49,39 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-security-keycloak</artifactId>
 		</dependency>
-		
+
 		<!-- Data -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-group-database</artifactId>
 			<type>pom</type>
 		</dependency>
-		
+
 		<!-- Engine -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-group-engines-core</artifactId>
 			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-typescript</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-template</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-template-velocity</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-template-mustache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-template-javascript</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
@@ -71,7 +91,26 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-engine-bpm-flowable</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-jobs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-listeners</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-websockets</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-engine-openapi</artifactId>
+		</dependency>
 		
 		<!-- API -->
 		<dependency>
@@ -80,26 +119,26 @@
 			<type>pom</type>
 		</dependency>
 		<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-api-bpm</artifactId>
-        	</dependency>
-		
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-api-bpm</artifactId>
+		</dependency>
+
 		<!-- Resources -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-group-resources</artifactId>
 			<type>pom</type>
 		</dependency>
-		
+
 		<!-- IDE -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-workspace</artifactId>
 		</dependency>
 		<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-actions-service</artifactId>
-        	</dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-actions-service</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-git</artifactId>
@@ -116,7 +155,7 @@
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-terminal</artifactId>
 		</dependency>
-		
+
 		<!-- IDE UI -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
@@ -275,38 +314,38 @@
 			<artifactId>dirigible-components-ide-ui-data-structures</artifactId>
 		</dependency>
 		<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-extensions</artifactId>
-        	</dependency>
-        	<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-extensions-menu</artifactId>
-        	</dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-extensions</artifactId>
+		</dependency>
 		<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-jobs</artifactId>
-        	</dependency>
-        	<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-jobs-menu</artifactId>
-        	</dependency>
-        	<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-listeners</artifactId>
-        	</dependency>
-        	<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-listeners-menu</artifactId>
-        	</dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-extensions-menu</artifactId>
+		</dependency>
 		<dependency>
-            		<groupId>org.eclipse.dirigible</groupId>
-            		<artifactId>dirigible-components-ide-ui-operations</artifactId>
-        	</dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-jobs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-jobs-menu</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-listeners</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-listeners-menu</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.dirigible</groupId>
+			<artifactId>dirigible-components-ide-ui-operations</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ide-ui-terminal</artifactId>
 		</dependency>
-		
+
 		<!-- Templates -->
 		<dependency>
 			<groupId>org.eclipse.dirigible</groupId>
@@ -371,7 +410,7 @@
 			<plugin>
 				<groupId>pl.project13.maven</groupId>
 				<artifactId>git-commit-id-plugin</artifactId>
-				<version>${git-commit-id-plugin.version}</version>
+				<version>${maven-git-commit-id-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>get-the-git-infos</id>
@@ -427,9 +466,9 @@
 		</profile>
 	</profiles>
 
-    <properties>
-        <license.header.location>../licensing-header.txt</license.header.location>
+	<properties>
+		<license.header.location>../licensing-header.txt</license.header.location>
 		<skipITs>true</skipITs>
-    </properties>
+	</properties>
 
 </project>
