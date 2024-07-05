@@ -49,7 +49,7 @@ docker run --name codbex-hyperion --rm -p 80:80 \
     ghcr.io/codbex/codbex-hyperion:$IMAGE_VERSION
 ```
 
-If you want persistent workspace and database with the default configuration, you can attach a folder to the image
+If you want persistent workspace and database with the default configurations, you can attach a folder to the image
 
 ```
 HYPERION_WORKSPACE_DIR='/tmp/hyperion'
@@ -88,13 +88,13 @@ To quickly create a new project, follow the steps bellow:
       ![bpm-generate-form](misc/images/bpm-generate-form.png)
 - Now you can test your first process
     - Refresh the workspace by clicking on `Refresh` button
-    - Navigate to generated form and open the `Preview` tab
+    - Navigate to the generated form and open the `Preview` tab
       ![bpm-trigger-form](misc/images/bpm-trigger-form.png)
     - Add process params and click on `Trigger` button
       ![bpm-trigger-process-instance](misc/images/bpm-trigger-process-instance.png)
     - Now, your process is triggered
     - You can check the logs for a message from the default process service task
       ![bpm-task-log](misc/images/bpm-task-log.png)
-- Next steps are to modify the process as you wish
+- Next steps are to modify the process to fit your needs
   
       
