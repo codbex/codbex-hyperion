@@ -10,7 +10,7 @@
  */
 package com.codbex.hyperion.ui.tests;
 
-import com.codbex.hyperion.ui.Hyperion;
+import org.eclipse.dirigible.tests.IDE;
 import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +20,11 @@ class HomePageIT extends UserInterfaceIntegrationTest {
     private static final String CODBEX_HEADER = "codbex";
 
     @Autowired
-    private Hyperion hyperion;
+    private IDE ide;
 
     @Test
     void testOpenHomepage() {
-        hyperion.openHomePage();
+        ide.openHomePage();
 
         browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER5, CODBEX_HEADER);
     }
