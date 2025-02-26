@@ -11,16 +11,14 @@
 package com.codbex.hyperion.ui.tests;
 
 import ch.qos.logback.classic.Level;
+import org.eclipse.dirigible.components.api.bpm.BpmFacade;
 import org.eclipse.dirigible.tests.FormView;
-import org.eclipse.dirigible.tests.IDE;
 import org.eclipse.dirigible.tests.WelcomeView;
 import org.eclipse.dirigible.tests.Workbench;
 import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.eclipse.dirigible.tests.logging.LogsAsserter;
-import org.eclipse.dirigible.tests.restassured.RestAssuredExecutor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.concurrent.TimeUnit;
 
@@ -36,7 +34,6 @@ class BPMStarterTemplateIT extends UserInterfaceIntegrationTest {
     private static final String TRIGGER_PROCESS_FORM_FILENAME = "trigger-new-process.form";
     private static final String TRIGGER_PROCESS_FORM_PATH =
             "/services/web/" + TEST_PROJECT + "/gen/trigger-new-process/forms/trigger-new-process/index.html";
-
     private static final String PARAM_1_ID = "param1Id";
     private static final String PARAM_2_ID = "param2Id";
     private static final String PARAM_1_VALUE = "string-param-value";
@@ -44,12 +41,6 @@ class BPMStarterTemplateIT extends UserInterfaceIntegrationTest {
     public static final String EXPECTED_TASK_LOGGED_MESSAGE =
             "Hello World! Process variables: {param1=" + PARAM_1_VALUE + ", param2=" + PARAM_2_VALUE + ".0}";
     private static final String TRIGGER_BUTTON_TEXT = "Trigger";
-
-    @Autowired
-    private IDE ide;
-
-    @Autowired
-    private RestAssuredExecutor restAssuredExecutor;
 
     private LogsAsserter consoleLogAsserter;
 
@@ -60,7 +51,6 @@ class BPMStarterTemplateIT extends UserInterfaceIntegrationTest {
 
     @Test
     void testCreateProjectFromTemplate() {
-        ide.openHomePage();
         Workbench workbench = ide.openWorkbench();
 
         WelcomeView welcomeView = workbench.openWelcomeView();
@@ -82,13 +72,25 @@ class BPMStarterTemplateIT extends UserInterfaceIntegrationTest {
         workbench.clickPublishAll();
         ide.assertPublishedAllProjectsMessage();
 
+        waitUntilProcessIsDeployed();
+
         browser.openPath(TRIGGER_PROCESS_FORM_PATH);
         browser.enterTextInElementById(PARAM_1_ID, PARAM_1_VALUE);
         browser.enterTextInElementById(PARAM_2_ID, PARAM_2_VALUE);
         browser.clickOnElementContainingText(HtmlElementType.BUTTON, TRIGGER_BUTTON_TEXT);
 
-        await().atMost(10, TimeUnit.SECONDS)
+        await().atMost(30, TimeUnit.SECONDS)
                .until(() -> consoleLogAsserter.containsMessage(EXPECTED_TASK_LOGGED_MESSAGE, Level.INFO));
+    }
+
+    private void waitUntilProcessIsDeployed() {
+        await().atMost(25, TimeUnit.SECONDS)
+               .until(() -> BpmFacade.getEngine()
+                                     .getProcessEngine()
+                                     .getRepositoryService()
+                                     .createDeploymentQuery()
+                                     .deploymentKeyLike("%" + TEST_PROCESS + "%")
+                                     .count() == 1);
     }
 
 }
