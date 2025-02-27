@@ -1,4 +1,11 @@
 target/
+bin/
+log/
+application/build/
+.idea
+.history
+.vscode
+
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -19,6 +26,5 @@ dist/
 *.bak
 *.class
 *.jar
+*.log
 derby.log
-logs/
-.idea
