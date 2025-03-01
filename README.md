@@ -1,4 +1,8 @@
-# codbex-hyperion
+# Hyperion by codbex
+
+[![Build Status](https://github.com/codbex/codbex-hyperion/actions/workflows/build.yaml/badge.svg)](https://github.com/codbex/codbex-hyperion/actions/workflows/build.yaml)
+[![Eclipse License](https://img.shields.io/badge/License-EPL%202.0-brightgreen.svg)](https://github.com/codbex/codbex-hyperion/blob/main/LICENSE)
+[![Maven Central](https://img.shields.io/maven-central/v/com.codbex.hyperion/codbex-hyperion-application.svg)](https://central.sonatype.com/namespace/com.codbex.hyperion)
 
 Hyperion Edition provides the Business Processes modeling, management and operation components.
 
