@@ -215,7 +215,6 @@
 		</dependency>
 
         <!-- IDE UI Editors -->
-
         <dependency>
 			<groupId>org.eclipse.dirigible</groupId>
 			<artifactId>dirigible-components-ui-editor-bpm</artifactId>
