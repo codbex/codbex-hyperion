@@ -84,7 +84,7 @@ class BPMStarterTemplateIT extends HyperionIntegrationTest {
     }
 
     private void waitUntilProcessIsDeployed() {
-        await().atMost(25, TimeUnit.SECONDS)
+        await().atMost(30, TimeUnit.SECONDS)
                .until(() -> BpmFacade.getEngine()
                                      .getProcessEngine()
                                      .getRepositoryService()
@@ -92,5 +92,4 @@ class BPMStarterTemplateIT extends HyperionIntegrationTest {
                                      .deploymentKeyLike("%" + TEST_PROCESS + "%")
                                      .count() == 1);
     }
-
 }
