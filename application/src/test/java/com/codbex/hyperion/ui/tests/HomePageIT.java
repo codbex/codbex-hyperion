@@ -15,7 +15,7 @@ import org.eclipse.dirigible.tests.framework.HtmlElementType;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-class HomePageIT extends UserInterfaceIntegrationTest {
+class HomePageIT extends HyperionIntegrationTest {
 
     @Autowired
     private IDE ide;

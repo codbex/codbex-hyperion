@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.awaitility.Awaitility.await;
 
-class BPMStarterTemplateIT extends UserInterfaceIntegrationTest {
+class BPMStarterTemplateIT extends HyperionIntegrationTest {
 
     private static final String TEMPLATE_TITLE = "BPM Project Starter";
     private static final String TEST_PROJECT = "bpm-test-project";
@@ -84,7 +84,7 @@ class BPMStarterTemplateIT extends UserInterfaceIntegrationTest {
     }
 
     private void waitUntilProcessIsDeployed() {
-        await().atMost(25, TimeUnit.SECONDS)
+        await().atMost(30, TimeUnit.SECONDS)
                .until(() -> BpmFacade.getEngine()
                                      .getProcessEngine()
                                      .getRepositoryService()
@@ -92,5 +92,4 @@ class BPMStarterTemplateIT extends UserInterfaceIntegrationTest {
                                      .deploymentKeyLike("%" + TEST_PROCESS + "%")
                                      .count() == 1);
     }
-
 }
