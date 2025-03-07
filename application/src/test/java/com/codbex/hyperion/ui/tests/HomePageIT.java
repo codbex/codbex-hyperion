@@ -24,7 +24,7 @@ class HomePageIT extends HyperionIntegrationTest {
     void testOpenHomepage() {
         ide.openHomePage();
 
-        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "codbex");
+        browser.assertElementExistsByTypeAndText(HtmlElementType.SPAN, "Hyperion");
         browser.assertElementExistsByTypeAndText(HtmlElementType.HEADER3, "Welcome to Hyperion");
     }
 }
