@@ -8,11 +8,9 @@
  * SPDX-FileCopyrightText: 2022 codbex or an codbex affiliate company and contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-package com.codbex.hyperion.ui.tests;
+package com.codbex.hyperion.integration.tests;
 
-import org.eclipse.dirigible.tests.UserInterfaceIntegrationTest;
-import org.springframework.context.annotation.Import;
+import org.eclipse.dirigible.integration.tests.ui.tests.BPMStarterTemplateIT;
 
-@Import(TestConfigurations.class)
-public abstract class HyperionIntegrationTest extends UserInterfaceIntegrationTest {
+class HyperionBPMStarterTemplateIT extends BPMStarterTemplateIT {
 }
