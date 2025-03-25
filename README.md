@@ -184,5 +184,3 @@ To quickly create a new project, follow the steps bellow:
     - You can check the logs for a message from the default process service task
       ![bpm-task-log](misc/images/bpm-task-log.png)
 - Next steps are to modify the process to fit your needs
-  
-      
