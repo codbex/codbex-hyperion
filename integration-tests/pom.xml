@@ -68,13 +68,4 @@
         </dependency>
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>integration-tests</id>
-            <properties>
-                <skipITs>false</skipITs>
-            </properties>
-        </profile>
-    </profiles>
-
 </project>
