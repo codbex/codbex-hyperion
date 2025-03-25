@@ -10,7 +10,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-
     <name>Tests - Integration Tests</name>
     <artifactId>codbex-hyperion-integration-tests</artifactId>
     <packaging>jar</packaging>
@@ -25,15 +24,16 @@
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-tests-integrations</artifactId>
             <scope>test</scope>
-            <classifier>tests</classifier>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-tests-framework</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test-spring-junit5</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
