@@ -8,7 +8,7 @@
  * SPDX-FileCopyrightText: 2022 codbex or an codbex affiliate company and contributors
  * SPDX-License-Identifier: EPL-2.0
  */
-package com.codbex.hyperion.ui.tests;
+package com.codbex.hyperion.integration.tests;
 
 import org.eclipse.dirigible.tests.UserInterfaceIntegrationTest;
 import org.springframework.context.annotation.Import;

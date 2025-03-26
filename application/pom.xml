@@ -146,9 +146,9 @@
             <artifactId>dirigible-components-ui-shell-ide</artifactId>
         </dependency>
         <dependency>
-			<groupId>org.eclipse.dirigible</groupId>
-			<artifactId>dirigible-components-ui-platform-branding</artifactId>
-		</dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-ui-platform-branding</artifactId>
+        </dependency>
 
         <!-- IDE Backend -->
         <dependency>
@@ -496,16 +496,14 @@
             <artifactId>dirigible-components-template-form-builder-angularjs</artifactId>
         </dependency>
 
-        <!-- Tests -->
-        <dependency>
-            <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-tests-framework</artifactId>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -514,6 +512,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>executable</classifier>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
