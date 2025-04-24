@@ -10,8 +10,8 @@
  */
 package com.codbex.hyperion.integration.tests;
 
-import org.eclipse.dirigible.tests.IDE;
-import org.eclipse.dirigible.tests.framework.HtmlElementType;
+import org.eclipse.dirigible.tests.framework.browser.HtmlElementType;
+import org.eclipse.dirigible.tests.framework.ide.IDE;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
