@@ -9,25 +9,23 @@ Hyperion Edition provides the Business Processes modeling, management and operat
 It is good for exploration BPMN scenarios based on Flowable framework.
 
 <!-- TOC -->
-
-* [codbex-hyperion](#codbex-hyperion)
-    * [Run steps](#run-steps)
-        * [Start using Docker and released image](#start-using-docker-and-released-image)
-        * [Start using Docker and local sources](#start-using-docker-and-local-sources)
-            * [Build the project jar](#build-the-project-jar)
-            * [Build and run docker image locally](#build-and-run-docker-image-locally)
-        * [Java standalone application](#java-standalone-application)
-            * [Start the application](#start-the-application)
-            * [Start the application **in debug** with debug port
-              `8000`](#start-the-application-in-debug-with-debug-port-8000)
-        * [Run unit tests](#run-unit-tests)
-        * [Run integration tests](#run-integration-tests)
-        * [Run all tests](#run-all-tests)
-        * [Format the code](#format-the-code)
-    * [Access the application](#access-the-application)
-    * [REST API](#rest-api)
-        * [Quick start](#quick-start)
-
+* [Hyperion by codbex](#hyperion-by-codbex)
+  * [Run steps](#run-steps)
+    * [Start using Docker and released image](#start-using-docker-and-released-image)
+    * [Start using Docker and local sources](#start-using-docker-and-local-sources)
+      * [Build the project jar](#build-the-project-jar)
+      * [Build and run docker image locally](#build-and-run-docker-image-locally)
+    * [Java standalone application](#java-standalone-application)
+      * [Start the application](#start-the-application)
+      * [Start the application **in debug** with debug port `8000`](#start-the-application-in-debug-with-debug-port-8000)
+      * [Spring profiles](#spring-profiles)
+    * [Run unit tests](#run-unit-tests)
+    * [Run integration tests](#run-integration-tests)
+    * [Run all tests](#run-all-tests)
+    * [Format the code](#format-the-code)
+  * [Access the application](#access-the-application)
+  * [REST API](#rest-api)
+    * [Quick start](#quick-start)
 <!-- TOC -->
 
 ## Run steps
@@ -108,6 +106,11 @@ java \
     --add-opens=java.base/java.nio=ALL-UNNAMED \
     -jar application/target/codbex-hyperion-*.jar
 ```
+
+#### Spring profiles
+- Eclipse Dirigible profiles
+  To activate Eclipse Dirigible, you have to add profiles `common` and `app-default` explicitly.<br>
+  Example for profile `snowflake`: `SPRING_PROFILES_ACTIVE=common,snowflake,app-default`
 
 ---
 
