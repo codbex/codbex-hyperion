@@ -32,5 +32,5 @@ import org.junit.platform.suite.api.Suite;
         SecurityIT.class, //
         TerminalIT.class//
 })
-public class DirigibileCommonTestSuiteIT {
+public class DirigibleCommonTestSuiteIT {
 }
