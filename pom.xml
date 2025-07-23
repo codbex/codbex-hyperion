@@ -175,13 +175,13 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.codbex.atlas</groupId>
-                <artifactId>codbex-atlas-components-ui-welcome</artifactId>
+                <groupId>com.codbex.hyperion</groupId>
+                <artifactId>codbex-hyperion-components-ui-welcome</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.codbex.atlas</groupId>
-                <artifactId>codbex-atlas-components-ui-menu-help</artifactId>
+                <groupId>com.codbex.hyperion</groupId>
+                <artifactId>codbex-hyperion-components-ui-menu-help</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

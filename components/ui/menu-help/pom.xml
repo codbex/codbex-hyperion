@@ -2,14 +2,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.codbex.atlas</groupId>
-        <artifactId>codbex-atlas-components-parent</artifactId>
+        <groupId>com.codbex.hyperion</groupId>
+        <artifactId>codbex-hyperion-components-parent</artifactId>
         <version>3.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <name>Components - UI - Help - Menu</name>
-    <artifactId>codbex-atlas-components-ui-menu-help</artifactId>
+    <artifactId>codbex-hyperion-components-ui-menu-help</artifactId>
     <packaging>jar</packaging>
 
     <properties>

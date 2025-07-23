@@ -137,12 +137,12 @@
 
         <!-- IDE UI -->
         <dependency>
-            <groupId>com.codbex.atlas</groupId>
-            <artifactId>codbex-atlas-components-ui-menu-help</artifactId>
+            <groupId>com.codbex.hyperion</groupId>
+            <artifactId>codbex-hyperion-components-ui-menu-help</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.codbex.atlas</groupId>
-            <artifactId>codbex-atlas-components-ui-welcome</artifactId>
+            <groupId>com.codbex.hyperion</groupId>
+            <artifactId>codbex-hyperion-components-ui-welcome</artifactId>
         </dependency>
 
         <!-- API -->
