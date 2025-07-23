@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.codbex.hyperion</groupId>
-        <artifactId>codbex-hyperion-parent</artifactId>
+        <groupId>com.codbex.atlas</groupId>
+        <artifactId>codbex-atlas-components-parent</artifactId>
         <version>3.0.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <name>codbex - hyperion - welcome</name>
-    <artifactId>codbex-hyperion-welcome</artifactId>
+    <name>codbex - atlas - welcome</name>
+    <artifactId>codbex-atlas-components-ui-welcome</artifactId>
     <packaging>jar</packaging>
 
 </project>
