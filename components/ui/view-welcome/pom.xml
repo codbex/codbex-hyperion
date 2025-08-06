@@ -4,13 +4,13 @@
 
     <parent>
         <groupId>com.codbex.hyperion</groupId>
-        <artifactId>codbex-hyperion-parent</artifactId>
+        <artifactId>codbex-hyperion-components-parent</artifactId>
         <version>3.0.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <name>codbex - hyperion - welcome</name>
-    <artifactId>codbex-hyperion-welcome</artifactId>
+    <artifactId>codbex-hyperion-components-ui-welcome</artifactId>
     <packaging>jar</packaging>
 
 </project>
