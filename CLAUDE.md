@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Hyperion is a codbex Edition product for **BPMN business-process modeling, management and operation**, built on the [Eclipse Dirigible](https://www.dirigible.io) low-code platform (Flowable as the BPM engine) packaged as a Spring Boot application. The repo itself contains very little business logic — it is primarily an **assembly**: it wires together a curated set of Dirigible component artifacts via Maven dependencies, adds branding, and overrides a few UI pieces. Understanding the architecture means understanding *what is assembled and how it is overridden*, not a large local codebase.
+Hyperion is a codbex Edition product for **BPMN business-process modeling, management and operation** — Business Process Management fully compliant with BPMN v2, with **Flowable** as the BPM engine. It is built on the [Eclipse Dirigible](https://www.dirigible.io) low-code platform and packaged as a Spring Boot application. The repo itself contains very little business logic — it is primarily an **assembly**: it wires together a curated set of Dirigible component artifacts via Maven dependencies, adds branding, and overrides a few UI pieces. Understanding the architecture means understanding *what is assembled and how it is overridden*, not a large local codebase.
+
+Hyperion is one of several [codbex products](https://www.codbex.com/products/) — each is a Spring Boot **edition** that selects a different subset of the same shared platform's components (e.g. Atlas = the all-in-one edition, Helios = APIs, Hades = databases, Iapetus = integration/Camel, Phoebe = Airflow workflows). Hyperion's niche in that family is **BPM/BPMN**, which is why its dependency set centers on the BPM/Flowable engines, the Processes/Operations IDE perspectives, and BPM editors/menus/templates. Sibling repos follow the same assembly + override structure described below.
 
 Requires **JDK 21**. Default login is `admin` / `admin`; the app serves on port **80**.
 
