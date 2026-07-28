@@ -61,12 +61,20 @@
             <artifactId>dirigible-components-group-database</artifactId>
             <type>pom</type>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-data-store-java</artifactId>
+        </dependency>
 
         <!-- Engine -->
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-group-engines-core</artifactId>
             <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-engine-intent</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
@@ -536,6 +544,26 @@
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-template-form-builder-angularjs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-template-application-schema</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-template-application-rest-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-template-application-ui-harmonia-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-template-application-events-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.dirigible</groupId>
+            <artifactId>dirigible-components-template-form-builder-harmonia</artifactId>
         </dependency>
 
     </dependencies>
