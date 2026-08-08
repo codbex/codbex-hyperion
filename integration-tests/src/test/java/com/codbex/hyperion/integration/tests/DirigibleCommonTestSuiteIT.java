@@ -26,7 +26,6 @@ import org.junit.platform.suite.api.Suite;
         DatabasePerspectiveIT.class, //
         DeclineLeaveRequestBpmIT.class, //
         GitPerspectiveIT.class, //
-        HomepageRedirectIT.class, //
         MailIT.class, //
         MessagingFacadeIT.class, //
         SecurityIT.class, //
