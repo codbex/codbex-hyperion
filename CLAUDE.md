@@ -10,6 +10,15 @@ Hyperion is a codbex **edition** — a Spring Boot product that selects a focuse
 
 Requires **JDK 21**. Default login is `admin` / `admin`; the app serves on port **80**.
 
+**Two deliberate departures from the platform defaults**, both in the edition's own configuration:
+
+- **No Intent Driven tooling.** Hyperion models processes directly in BPMN, so `engine-intent` is not included and `ui-editor-intent` (the Intent Editor) and `resources-builder` (the conversational Builder shell) are excluded from the `group-ide` / `group-ui` aggregators. The Harmonia + client-Java application templates stay — they are the generated-application stack, driven by the entity modeler, not by the intent layer.
+- **Home is the Workbench IDE.** `DIRIGIBLE_HOME_URL=services/web/shell-ide/` in `dirigible.properties`, overriding the platform's 14.16.0+ default of `services/web/home/` (the Home launchpad). The launchpad remains reachable at `/services/web/home/`; only the `/` redirect changes. Consequence: upstream's `HomepageRedirectIT` asserts the platform default and cannot run here — it was dropped from the common suite, and Hyperion's own `HomePageIT` (Workbench welcome view on `/`) is the assertion that guards the override.
+
+## Dirigible version
+
+The Dirigible version is pinned by `codbex-platform-parent` through its `dirigible.version` property, and parent releases track Dirigible releases 1:1 (parent 14.17.0 -> Dirigible 14.17.0) — bumping the edition means bumping the parent version in the root `pom.xml`. Bumps are not mechanical, because Dirigible removes things: the **OData engine was extracted in 14.16.0** (which un-managed `com.codbex.olingo:olingo-odata2-lib`, so the version-less declaration in the root pom failed the build at model-read time), and the **AngularJS/TypeScript application templates were removed** in the same release (`template-form-builder-angularjs` among them).
+
 ## Build & run
 
 All commands run from the repo root.

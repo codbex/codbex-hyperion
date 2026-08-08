@@ -74,10 +74,6 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-engine-intent</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-engine-typescript</artifactId>
         </dependency>
         <dependency>
@@ -140,6 +136,11 @@
                     <groupId>org.eclipse.dirigible</groupId>
                     <artifactId>dirigible-components-ui-menu-help</artifactId>
                 </exclusion>
+                <!-- Intent Driven tooling: Hyperion is a BPM/BPMN edition, it models processes directly -->
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-resources-builder</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
 
@@ -179,6 +180,11 @@
             <artifactId>dirigible-components-group-ide</artifactId>
             <type>pom</type>
             <exclusions>
+                <!-- Intent Driven tooling: Hyperion is a BPM/BPMN edition, it models processes directly -->
+                <exclusion>
+                    <groupId>org.eclipse.dirigible</groupId>
+                    <artifactId>dirigible-components-ui-editor-intent</artifactId>
+                </exclusion>
                 <exclusion>
                     <groupId>org.eclipse.dirigible</groupId>
                     <artifactId>dirigible-components-ui-view-welcome</artifactId>
@@ -540,10 +546,6 @@
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
             <artifactId>dirigible-components-template-websocket</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.dirigible</groupId>
-            <artifactId>dirigible-components-template-form-builder-angularjs</artifactId>
         </dependency>
         <dependency>
             <groupId>org.eclipse.dirigible</groupId>
