@@ -1,4 +1,4 @@
-FROM amazoncorretto:21-alpine
+FROM amazoncorretto:25-alpine
 
 VOLUME /tmp
 
@@ -15,5 +15,5 @@ RUN apk --no-cache add msttcorefonts-installer fontconfig && update-ms-fonts && 
 COPY target/codbex-hyperion-[0-9]*.jar codbex-hyperion.jar
 # PropertiesLauncher (not -jar / JarLauncher) so AOT-compiled module jars dropped into /modules
 # join the classpath (eclipse-dirigible/dirigible#6592). A missing or empty /modules is ignored.
-ENTRYPOINT ["java", "--add-opens", "java.base/java.lang=ALL-UNNAMED", "--add-opens", "java.base/java.lang.reflect=ALL-UNNAMED", "--add-opens", "java.base/java.nio=ALL-UNNAMED", "-cp", "/codbex-hyperion.jar", "-Dloader.path=/modules", "org.springframework.boot.loader.launch.PropertiesLauncher"]
+ENTRYPOINT ["java", "-XX:MaxRAMPercentage=50.0", "-XX:+ExitOnOutOfMemoryError", "-XX:+UseCompactObjectHeaders", "--add-opens", "java.base/java.lang=ALL-UNNAMED", "--add-opens", "java.base/java.lang.reflect=ALL-UNNAMED", "--add-opens", "java.base/java.nio=ALL-UNNAMED", "-cp", "/codbex-hyperion.jar", "-Dloader.path=/modules", "org.springframework.boot.loader.launch.PropertiesLauncher"]
 EXPOSE 80 8081
